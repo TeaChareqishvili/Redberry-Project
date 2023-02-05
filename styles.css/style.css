@@ -1,0 +1,72 @@
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+ body{
+    max-width:1920px;
+    width:100%;
+} 
+
+/* Home page */ 
+
+.main-page{
+    position:relative;
+    height:100vh;
+    max-width:1920px;
+    width:100%;
+    background-color:#FFFFFF;
+    background-image: url("../image/background.png");
+    background-size: cover;  
+}
+
+.top-logo{
+  position:absolute;
+  top:25px;
+  left:70px;
+}
+
+/* .redberry{
+    width:236px;
+    height:38px;
+} */
+
+.border{ 
+    width:90%;
+    border:solid 1px #1A1A1A;
+    position:absolute;
+    left: 70px;
+    right: 70px;
+    top: 89px;  
+}
+
+.center-logo{
+    position:absolute;
+     top:40%;
+     left:54%;  
+}
+
+.add-resume{
+    height:100vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.btn{
+    width: 344px;
+    background-color: #1A1A1A;
+    border-radius:8px;
+    color:#FFFFFF;
+    padding:18px 60px;
+    cursor: pointer;
+
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+}
