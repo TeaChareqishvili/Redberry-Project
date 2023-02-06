@@ -12,6 +12,7 @@ body{
 }
 
 
+
 /* home-page */
 
 
@@ -71,6 +72,10 @@ body{
 
 /* resume first page */
 
+.background{
+    background-color:
+    rgba(188, 188, 188, 1)
+}
 .grid-page{
     display:grid;
     grid-template-columns: 8% 50% 42%;
@@ -87,13 +92,11 @@ body{
     justify-content: space-between;
     align-items: center;
     border-bottom:1px solid #1A1A1A;
+    margin-bottom:77px;
    
 }
 
-.back-btn,.form-side{
-    background-color:
-    rgba(188, 188, 188, 1)
-}
+
 .back-btn{
     padding:45px 48px;
 }
@@ -119,9 +122,7 @@ body{
     color:#2E2E2E;
    
 }
-/* .page-div{
-    padding:0  149px 12px;
-} */
+
 .page{
     font-family: 'Helvetica Neue';
     font-style: normal;
@@ -136,10 +137,10 @@ body{
 .form{
     display:flex;
     flex-direction: column;
+   
 }
 .form-name{
     display:flex;
-    padding-top:77px;
     justify-content: space-between;
 }
 
@@ -230,8 +231,57 @@ footer{
 }
 
 .resume{
+    background-color:#FFFFFF;
+    height:1080px;
     display:flex;
     justify-content:flex-start;
     align-items: flex-end;
     padding:0 0 44px 78px;
+}
+
+
+/* second page form */
+
+.description{
+    width: 798px;
+    height: 123px;
+    background: #FFFFFF;
+    border: 1px solid #BCBCBC;
+    border-radius: 4px;
+}
+.additional-info{
+    display:none;
+}
+.active{
+    display:block;
+}
+.description-input{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    border-bottom:1px solid red;
+    padding-bottom:59px;
+}
+
+.add-info{
+    margin-top:45px;
+    display:flex;
+    justify-content: flex-start;
+}
+
+.more-info{
+    width: 289px;
+    height: 48px;
+    background-color:rgba(98, 161, 235, 1);
+    color:#FFFFFF;
+    border-radius:4px;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    padding:14px 21px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
