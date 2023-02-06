@@ -6,67 +6,68 @@
     text-decoration: none;
 }
 
- body{
-    max-width:1920px;
-    width:100%;
-} 
+body{
+    width:1920px;
+    height:1080px;
+}
 
-/* Home page */ 
+
+/* home-page */
+
 
 .main-page{
-    position:relative;
-    height:100vh;
-    max-width:1920px;
+    background-color:#ffffff;
+    background-image: url(../image/background.png);
+    background-repeat: no-repeat;
+    background-size:contain;
     width:100%;
-    background-color:#FFFFFF;
-    background-image: url("../image/background.png");
-    background-size: cover;  
+    height:100%;
+    position:relative;
 }
 
 .top-logo{
-  position:absolute;
-  top:25px;
-  left:70px;
-}
-
-/* .redberry{
-    width:236px;
-    height:38px;
-} */
-
-.border{ 
-    width:90%;
-    border:solid 1px #1A1A1A;
     position:absolute;
-    left: 70px;
-    right: 70px;
-    top: 89px;  
+    top:25px;
+    left:70px;
 }
 
 .center-logo{
-    position:absolute;
-     top:40%;
-     left:54%;  
+    position: absolute;
+   left: 1076px;
+   top: 473px;
+}
+
+.border{
+    border: 1px solid #1A1A1A;
+    position: absolute;
+    left: 70px;
+    top: 89px;
+    width:92%;
+
 }
 
 .add-resume{
-    height:100vh;
-    display: flex;
+    display:flex;
     justify-content:center;
     align-items: center;
+    height:100%;
+    
 }
 
 .btn{
-    width: 344px;
-    background-color: #1A1A1A;
+    width:464px;
+    height:60px;
+    background-color:#1A1A1A;
     border-radius:8px;
-    color:#FFFFFF;
     padding:18px 60px;
-    cursor: pointer;
-
+    color:#ffffff;
     font-family: 'Helvetica Neue';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
+   font-style: normal;
+   font-weight: 500;
+   font-size: 20px;
+   line-height: 24px;
+
 }
+
+/* resume first page */
+
