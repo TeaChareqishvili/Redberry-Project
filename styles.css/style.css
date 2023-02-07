@@ -203,11 +203,17 @@ border-radius: 4px;
 }
 
 
-footer{
+.footer-button{
     
     display:flex;
     justify-content: flex-end;
     align-items: flex-end;
+}
+
+.footer-buttons{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .next{
     background: #6B40E3;
