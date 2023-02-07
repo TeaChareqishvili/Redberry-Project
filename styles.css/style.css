@@ -291,3 +291,27 @@ border-radius: 4px;
     justify-content: center;
     align-items: center;
 }
+
+/* third page form */
+
+.select{
+ width: 371px;
+height: 48px;
+background: #FFFFFF;
+border: 1px solid #BCBCBC;
+border-radius: 4px;
+font-family: 'Helvetica Neue';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 21px;
+padding:13px 16px 14px 16px; 
+}
+
+.education{
+ width: 798px;
+height: 179px;
+background: #FFFFFF;
+border: 1px solid #BCBCBC;
+border-radius: 4px;
+}
