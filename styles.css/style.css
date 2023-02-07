@@ -74,7 +74,7 @@ body{
 
 .background{
     background-color:
-    rgba(188, 188, 188, 1)
+    rgb(223, 222, 222)
 }
 .grid-page{
     display:grid;
@@ -238,6 +238,11 @@ border-radius: 4px;
 
 .resume{
     background-color:#FFFFFF;
+    padding:68px 75px 44px 80px;
+   
+}
+
+.resume-logo{
     height:1080px;
     display:flex;
     justify-content:flex-start;
@@ -265,7 +270,7 @@ border-radius: 4px;
     display:flex;
     flex-direction: column;
     justify-content:center;
-    border-bottom:1px solid red;
+    border-bottom:1px solid #C1C1C1;
     padding-bottom:59px;
 }
 
@@ -314,4 +319,78 @@ height: 179px;
 background: #FFFFFF;
 border: 1px solid #BCBCBC;
 border-radius: 4px;
+}
+
+/* resume side */
+
+.resume-person{
+   display:flex;
+   justify-content: flex-start;
+   align-items: center;
+
+}
+
+.resume-name{
+font-family: 'Helvetica Neue';
+font-style: normal;
+font-weight: 700;
+font-size: 34px;
+line-height: 42px;
+color: #F93B1D;
+padding:0 20px 17px 0;
+}
+
+.resume-info{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.resume-contact{
+   display:flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items:flex-start;
+}
+.div-contact{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    padding-bottom:10px;
+}
+
+.resume-link{
+font-family: 'Helvetica Neue';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 21px;
+color:#1A1A1A;
+padding-left:10px;
+
+}
+
+.resume-bio{
+    padding-top:34px;
+   
+}
+.resume-about-me{
+font-family: 'Helvetica Neue';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 22px;
+color:#F93B1D;
+padding-bottom:15px;
+}
+
+.my-bio{
+    width:432px;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color:#000000;
 }
