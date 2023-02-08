@@ -186,6 +186,48 @@ padding-top:8px;
 .img-input{
     padding:54px 0;
 }
+
+/* 
+  .input-type-file::-webkit-file-upload-button{
+      visibility:hidden;    
+}   */
+  /* .input-type-file::before {
+    content: 'ატვირთვა';
+    display: inline-block;
+    background:rgba(14, 128, 191, 1);
+    border-radius: 4px;
+    padding:4px 19px 6px 19px;
+    outline: none;
+    white-space: nowrap;
+  -webkit-user-select: none;
+    cursor: pointer;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color:#FFFFFF;
+    margin-left:19px;
+  }   */
+
+  .input-type-file{
+    display:none;
+  }
+  .file-upload{
+    cursor: pointer;
+    background-color:rgba(14, 128, 191, 1);
+    border-radius: 4px;
+    padding:4px 19px 6px 19px;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color:#FFFFFF;
+    margin-left:19px;
+    outline: none;
+  }
+ 
 .about-input{  
 width: 798px;
 height: 103px;
