@@ -385,8 +385,8 @@ padding:0 20px 17px 0;
 .resume-info{
     display:flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items:flex-start;
+    justify-content:flex-start;
 }
 
 .resume-contact{
@@ -401,7 +401,15 @@ padding:0 20px 17px 0;
     align-items:center;
     padding-bottom:10px;
 }
-
+/* .date{
+font-family: 'Helvetica Neue';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 21px;
+padding:15px 0 15px 10px;
+color:rgba(144, 144, 144, 1);
+} */
 .resume-link{
 font-family: 'Helvetica Neue';
 font-style: normal;
@@ -417,14 +425,21 @@ padding-left:10px;
     padding-top:34px;
    
 }
+.border-resume{
+    width:662px;
+    margin:auto;
+    background-color:rgba(200, 200, 200, 1);
+    height:1px;
+    margin:19px 0 24px 0;
+}
 .resume-about-me{
-font-family: 'Helvetica Neue';
-font-style: normal;
-font-weight: 700;
-font-size: 18px;
-line-height: 22px;
-color:#F93B1D;
-padding-bottom:15px;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color:#F93B1D;
+    padding-bottom:15px;
 }
 
 .my-bio{
@@ -435,4 +450,45 @@ padding-bottom:15px;
     font-size: 16px;
     line-height: 22px;
     color:#000000;
+}
+
+.position{
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color:#1A1A1A;
+  padding:15px 0 7px 7px;
+}
+
+.work-date{
+    font-family: 'Helvetica Neue';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #919191;
+    padding-bottom:16px;
+
+}
+
+.my-exp{
+    width:662px;
+    height:66px;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: capitalize;
+    color:#000000;
+}
+
+.add-resume{
+    display:none;
+}
+
+.add-active-resume{
+    display:block;
 }

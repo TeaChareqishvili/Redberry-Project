@@ -22,55 +22,56 @@
                         <span class="page">2/3</span>
                     </div>
                 </heading>
-                <form class="form" id="form" action="get">
+                <form class="form" id="form" action="get" onkeyup="secondPage()">
                     <div class="name">
                         <label class="input-title">თანამდებობა</label>
-                        <input type="text" class="contact" required/>
+                        <input type="text" class="contact" id="input-position" required/>
                         <span class="input-span">მინიმუმ ორი სიმბოლო</span>
                      </div>
                      <div class="name">
                        <label class="input-title">დამსაქმებელი</label>
-                       <input type="text" class="contact" required/>
+                       <input type="text" class="contact" id="input-work" required/>
                        <span class="input-span">მინიმუმ ორი სიმბოლო</span>
                     </div>
                     <div class="form-name">
                         <div class="name">
                            <label class="input-title">დაწყების რიცხვი</label>
-                           <input class="input-name" type="date"  required/> 
+                           <input class="input-name" type="date" id="start-date" required/> 
                         </div>
                         <div class="name">
                             <label class="input-title">დამთავრების რიცხვი</label>
-                            <input  class="input-name" type="date"  required/>
+                            <input  class="input-name" type="date" id="end-date" required/>
                          </div>
                       </div>
                       <div class="description-input">
                         <label class="input-title">აღწერა</label>
-                        <input type="text" class="description"/>
+                        <input type="text" class="description" id="description-input"/>
                       </div>
+
                      <div class="additional-info">
                         <div class="name">
                             <label class="input-title">თანამდებობა</label>
-                            <input type="text" class="contact" required/>
+                            <input type="text" class="contact" id="add-input-position" required/>
                             <span class="input-span">მინიმუმ ორი სიმბოლო</span>
                          </div>
                          <div class="name">
                            <label class="input-title">დამსაქმებელი</label>
-                           <input type="text" class="contact" required/>
+                           <input type="text" class="contact" add="add-input-work" required/>
                            <span class="input-span">მინიმუმ ორი სიმბოლო</span>
                         </div>
                         <div class="form-name">
                             <div class="name">
                                <label class="input-title">დაწყების რიცხვი</label>
-                               <input class="input-name" type="date"  required/> 
+                               <input class="input-name" type="date" id="add-start-date" required/> 
                             </div>
                             <div class="name">
                                 <label class="input-title">დამთავრების რიცხვი</label>
-                                <input  class="input-name" type="date"  required/>
+                                <input  class="input-name" type="date" id="add-end-date" required/>
                              </div>
                           </div>
                           <div class="description-input">
                             <label class="input-title">აღწერა</label>
-                            <input type="text" class="description"/>
+                            <input type="text" class="description" id="add-description-input"/>
                           </div>
                      </div>
                      <div class="add-info">
@@ -85,9 +86,65 @@
                    </footer>     
             </div>
               <div class="resume">
-                 <div class="resume-logo">
+                <div class="resume-info">
+                    <!-- <div class="resume-person">
+                       <p class="resume-name" id="resume-name"></p>
+                       <p class="resume-name" id="resume-last-name"></p>
+                    </div>
+                    <div class="resume-contact">
+                        <div class="div-contact">
+                            <img src="./image/vector-1.png" alt="logo">
+                            <a class="resume-link" href="#"> <p id="resume-mail"></p> </a>
+                        </div>
+                       <div class="div-contact">
+                        <img src="./image/Vector.png" alt="logo">
+                        <a  class="resume-link" href="#"> <p id="resume-number"></p></a>
+                       </div>   
+                    </div>  
+                    <div class="resume-bio">
+                         <p class="resume-about-me">ჩემ შესახებ</p>
+                         <p class="my-bio" id="resume-my-bio"></p>  
+                         <div class="border-resume"></div>    
+                    </div>   -->
+
+                    <div class="resume-bio">
+                        <p class="resume-about-me" >გამოცდილება</p>      
+                   </div> 
+                   <div class="resume-person">
+                        <p class="position" id="resume-position"></p>
+                        <p class="position" id="resume-work"></p>
+                   </div>
+                <div class="resume-person">
+                      <p class="work-date" id="resume-start-date"> - </p>
+                     <p class="work-date" id="resume-end-date">- </p>
+               </div>
+               <div class="resume-bio">
+                    <p class="my-exp" id="resume-my-exp"></p>
+                    <div class="border-resume"></div>  
+               </div>
+
+               <div class="add-resume">
+                <div class="resume-bio">
+                    <p class="resume-about-me" >გამოცდილება</p>      
+               </div> 
+               <div class="resume-person">
+                    <p class="position" id="add-resume-position"></p>
+                    <p class="position" id="add-resume-work"></p>
+               </div>
+            <div class="resume-person">
+                  <p class="work-date" id="add-resume-start-date"> - </p>
+                 <p class="work-date" id="add-resume-end-date">- </p>
+           </div>
+           <div class="resume-bio">
+                <p class="my-exp" id="add-resume-my-exp"></p>
+                <div class="border-resume"></div>  
+           </div>
+               </div>
+                </div>
+               
+                 <!-- <div class="resume-logo">
                      <img src="./image/resume-logo.svg" alt="resume=logo">
-                 </div>
+                 </div> -->
              </div>
             </div>
     </section>
