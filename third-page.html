@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +8,13 @@
     <link rel="stylesheet" href="./styles.css/style.css">
     <title>Resume</title>
 </head>
+
 <body onload="getEducation()">
     <section class="background">
         <div class="grid-page">
             <div class="back-btn">
-                <a href="./index.html" ><span class="back-arrow"> < </span></a>
+                <a href="./index.html"><span class="back-arrow">
+                        < </span></a>
             </div>
             <div class="form-side">
                 <heading class="heading">
@@ -25,44 +28,14 @@
                 <form class="form" id="form-education" action="get" onkeyup="saveEducationInfo()">
                     <div class="name">
                         <label class="input-title">სასწავლებელი</label>
-                        <input type="email" class="contact" pattern="/^[ა-ჰ]+$/" id="input-education" required/>
+                        <input type="text" class="contact" pattern="/^[ა-ჰ]+$/" id="input-education" minlength="2"
+                            required onblur="checkWorkplace(education)" />
                         <span class="input-span">მინიმუმ ორი სიმბოლო</span>
-                     </div>
-                     <div class="form-name">
+                    </div>
+                    <div class="form-name">
                         <div class="name">
-                           <label class="input-title">ხარისხი</label>
-                           <select class="select" id="select-education">
-                            <option value="" disabled selected hidden>აირჩიეთ ხარისხი</option>
-                            <option value="სასუალო სკოლის დიპლომი">საშუალო სკოლის დიპლომი</option>
-                            <option value="ზოგადსაგანმანათებლო დიპლომი">ზოგადსაგანმანათებლო დიპლომი</option>
-                            <option value="ბაკალავრი">ბაკალავრი</option>
-                            <option value="მაგისტრი">მაგისტრი</option>
-                            <option value="დოქტორი">დოქტორი</option>
-                            <option value="ასოცირებული პროფესორი">ასოცირებული პროფესორი</option>
-                            <option value="სტუდენტი">სტუდენტი</option>
-                            <option value="კოლეჯი (ხარისხის გარეშე)">კოლეჯი (ხარისხის გარეშე)</option>
-                            <option value="სხვა">სხვა</option>
-                           </select>
-                        </div>
-                        <div class="name">
-                            <label class="input-title">დამთავრების რიცხვი</label>
-                            <input  class="input-name" type="date" id="input-education-graduate-date" required/>
-                         </div> 
-                      </div>
-                      <div class="description-input">
-                        <label class="input-title">აღწერა</label>
-                        <input type="text" class="education" pattern="/^[ა-ჰ]+$/" id="input-education-description" />
-                      </div>
-                      <div class="additional-info">
-                        <div class="name">
-                            <label class="input-title">სასწავლებელი</label>
-                            <input type="email" class="contact" pattern="/^[ა-ჰ]+$/" required/>
-                            <span class="input-span">მინიმუმ ორი სიმბოლო</span>
-                         </div>
-                         <div class="form-name">
-                            <div class="name">
-                               <label class="input-title">ხარისხი</label>
-                               <select class="select">
+                            <label class="input-title">ხარისხი</label>
+                            <select class="select" id="select-education" onblur="checkSelect()">
                                 <option value="" disabled selected hidden>აირჩიეთ ხარისხი</option>
                                 <option value="სასუალო სკოლის დიპლომი">საშუალო სკოლის დიპლომი</option>
                                 <option value="ზოგადსაგანმანათებლო დიპლომი">ზოგადსაგანმანათებლო დიპლომი</option>
@@ -73,124 +46,165 @@
                                 <option value="სტუდენტი">სტუდენტი</option>
                                 <option value="კოლეჯი (ხარისხის გარეშე)">კოლეჯი (ხარისხის გარეშე)</option>
                                 <option value="სხვა">სხვა</option>
-                               </select>
+                            </select>
+                        </div>
+                        <div class="name">
+                            <label class="input-title">დამთავრების რიცხვი</label>
+                            <input class="input-name" type="date" id="input-education-graduate-date" required
+                                onblur="checkDate(graduateDate)" />
+                        </div>
+                    </div>
+                    <div class="description-input">
+                        <label class="input-title">აღწერა</label>
+                        <textarea type="text" class="education" pattern="/^[ა-ჰ]+$/" id="input-education-description"
+                            required onblur="checkDate(graduationDescription)"></textarea>
+                    </div>
+
+
+                    <div class="additional-info">
+                        <div class="name">
+                            <label class="input-title">სასწავლებელი</label>
+                            <input type="text" class="contact" pattern="/^[ა-ჰ]+$/" minlength="2" required />
+                            <span class="input-span">მინიმუმ ორი სიმბოლო</span>
+                        </div>
+                        <div class="form-name">
+                            <div class="name">
+                                <label class="input-title">ხარისხი</label>
+                                <select class="select">
+                                    <option value="" disabled selected hidden>აირჩიეთ ხარისხი</option>
+                                    <option value="სასუალო სკოლის დიპლომი">საშუალო სკოლის დიპლომი</option>
+                                    <option value="ზოგადსაგანმანათებლო დიპლომი">ზოგადსაგანმანათებლო დიპლომი</option>
+                                    <option value="ბაკალავრი">ბაკალავრი</option>
+                                    <option value="მაგისტრი">მაგისტრი</option>
+                                    <option value="დოქტორი">დოქტორი</option>
+                                    <option value="ასოცირებული პროფესორი">ასოცირებული პროფესორი</option>
+                                    <option value="სტუდენტი">სტუდენტი</option>
+                                    <option value="კოლეჯი (ხარისხის გარეშე)">კოლეჯი (ხარისხის გარეშე)</option>
+                                    <option value="სხვა">სხვა</option>
+                                </select>
                             </div>
                             <div class="name">
                                 <label class="input-title">დამთავრების რიცხვი</label>
-                                <input  class="input-name" type="date"  required/>
-                             </div> 
-                          </div>
-                          <div class="description-input">
+                                <input class="input-name" type="date" required />
+                            </div>
+                        </div>
+                        <div class="description-input">
                             <label class="input-title">აღწერა</label>
-                            <input type="text" class="education" pattern="/^[ა-ჰ]+$/"/>
-                          </div>
-                      </div>  
-                      <div class="add-info">
+                            <input type="text" class="education" pattern="/^[ა-ჰ]+$/" />
+                        </div>
+                    </div>
+                    <div class="add-info">
                         <button type="button" class="more-info">სხვა სასწავლებლის დამატება</button>
-                     </div>
+                    </div>
                 </form>
                 <footer>
                     <div class="footer-buttons">
                         <a href="./second-page.html"><button type="button" class="next">უკან</button></a>
-                        <a href="#"><button type="button" class="next">დასრულება</button></a>
+                        <a href="#"><button type="submit" class="next">დასრულება</button></a>
                     </div>
-                   </footer>  
+                </footer>
             </div>
             <div class="resume">
                 <div class="resume-info">
                     <div class="resume-person">
-                       <p class="resume-name" id="resume-name"></p>
-                       <p class="resume-name" id="resume-last-name"></p>
+                        <p class="resume-name" id="resume-name"></p>
+                        <p class="resume-name" id="resume-last-name"></p>
                     </div>
                     <div class="resume-contact">
                         <div class="div-contact">
                             <img src="./image/vector-1.png" alt="logo">
-                            <a class="resume-link" href="#"> <p id="resume-mail"></p> </a>
+                            <a class="resume-link" href="#">
+                                <p id="resume-mail"></p>
+                            </a>
                         </div>
-                       <div class="div-contact">
-                        <img src="./image/Vector.png" alt="logo">
-                        <a  class="resume-link" href="#"> <p id="resume-number"></p></a>
-                       </div>   
-                    </div>  
+                        <div class="div-contact">
+                            <img src="./image/Vector.png" alt="logo">
+                            <a class="resume-link" href="#">
+                                <p id="resume-number"></p>
+                            </a>
+                        </div>
+                    </div>
                     <div class="resume-bio">
-                         <p class="resume-about-me">ჩემ შესახებ</p>
-                         <p class="my-bio" id="resume-my-bio"></p>  
-                         <div class="border-resume"></div>    
-                    </div>  
+                        <p class="resume-about-me">ჩემ შესახებ</p>
+                        <p class="my-bio" id="resume-my-bio"></p>
+                        <div class="border-resume"></div>
+                    </div>
                     <!--  -->
                     <div class="resume-bio">
-                        <p class="resume-about-me" >გამოცდილება</p>      
-                   </div> 
-                   <div class="resume-person">
+                        <p class="resume-about-me">გამოცდილება</p>
+                    </div>
+                    <div class="resume-person">
                         <p class="position" id="resume-position"></p>
                         <p class="position" id="resume-work"></p>
-                   </div>
-                <div class="resume-person">
-                      <p class="work-date" id="resume-start-date"> - </p>
-                     <p class="work-date" id="resume-end-date">- </p>
-               </div>
-               <div class="resume-bio">
-                    <p class="my-exp" id="resume-my-exp"></p>
-                    <div class="border-resume"></div>  
-               </div>
-
-               <div class="add-personal-resume">
-                <div class="resume-bio">
-                    <p class="resume-about-me" >გამოცდილება</p>      
-               </div> 
-               <div class="resume-person">
-                    <p class="position" id="add-resume-position"></p>
-                    <p class="position" id="add-resume-work"></p>
-               </div>
-            <div class="resume-person">
-                  <p class="work-date" id="add-resume-start-date"> - </p>
-                 <p class="work-date" id="add-resume-end-date">- </p>
-           </div>
-           <div class="resume-bio">
-                <p class="my-exp" id="add-resume-my-exp"></p>
-                <div class="border-resume"></div>  
-           </div>
-               </div>
-
-
-               <div class="resume-bio">
-                <p class="resume-about-me" >განათლება</p>      
-           </div> 
-
-           <div class="resume-person">
-               <p class="position" id="resume-univercity"></p>
-            <p class="position" id="resume-degree"></p>
-       </div>
-           <div class="resume-person">
-                <!-- <p class="position" id="resume-degree"></p> -->
-                <p class="position" id="resume-degree-date"></p>
-           </div>
-              <div class="resume-bio">
-                 <p class="my-education" id="resume-education-desc"></p>
-              </div>
-                </div>
-
-               
-                <div class="add-resume-bio">
-                    <p class="resume-about-me" >განათლება</p>      
-               </div> 
-               <div class="resume-person">
-                    <p class="position" id="resume-degree"></p>
-                    <p class="position" id="resume-degree-date"></p>
-               </div>
-                  <div class="resume-bio">
-                     <p class="my-education" id="resume-education-desc"></p>
-                  </div>
+                    </div>
+                    <div class="resume-person">
+                        <p class="work-date" id="resume-start-date"> - </p>
+                        <p class="work-date" id="resume-end-date">- </p>
+                    </div>
+                    <div class="resume-bio">
+                        <p class="my-exp" id="resume-my-exp"></p>
+                        <div class="border-resume"></div>
                     </div>
 
-               
-                 <!-- <div class="resume-logo">
+                    <div class="add-personal-resume">
+                        <div class="resume-bio">
+                            <p class="resume-about-me">გამოცდილება</p>
+                        </div>
+                        <div class="resume-person">
+                            <p class="position" id="add-resume-position"></p>
+                            <p class="position" id="add-resume-work"></p>
+                        </div>
+                        <div class="resume-person">
+                            <p class="work-date" id="add-resume-start-date"> - </p>
+                            <p class="work-date" id="add-resume-end-date">- </p>
+                        </div>
+                        <div class="resume-bio">
+                            <p class="my-exp" id="add-resume-my-exp"></p>
+                            <div class="border-resume"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="resume-bio">
+                        <p class="resume-about-me">განათლება</p>
+                    </div>
+
+                    <div class="resume-person">
+                        <p class="position" id="resume-univercity"></p>
+                        <p class="position" id="resume-degree"></p>
+                    </div>
+                    <div class="resume-person">
+                        <!-- <p class="position" id="resume-degree"></p> -->
+                        <p class="position" id="resume-degree-date"></p>
+                    </div>
+                    <div class="resume-bio">
+                        <p class="my-education" id="resume-education-desc"></p>
+                    </div>
+                </div>
+
+
+                <div class="add-resume-bio">
+                    <p class="resume-about-me">განათლება</p>
+                </div>
+                <div class="resume-person">
+                    <p class="position" id="resume-degree"></p>
+                    <p class="position" id="resume-degree-date"></p>
+                </div>
+                <div class="resume-bio">
+                    <p class="my-education" id="resume-education-desc"></p>
+                </div>
+            </div>
+
+
+            <!-- <div class="resume-logo">
                      <img src="./image/resume-logo.svg" alt="resume=logo">
                  </div> -->
-             </div>
+        </div>
         </div>
     </section>
 
     <script src="main.js"></script>
+    <script src="validate.js"></script>
 </body>
+
 </html>

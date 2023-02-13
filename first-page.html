@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,91 +8,112 @@
     <link rel="stylesheet" href="./styles.css/style.css">
     <title>Resume</title>
 </head>
+<!--  checkAllInputs() -->
 <body onload="getPersonalInfo()">
-   <section class="background">
-     <div class="grid-page">
-        <div class="back-btn" onclick="clearStorage()">
-            <a href="./index.html" ><span class="back-arrow"> < </span></a>
-        </div>
-        <div class="form-side">
-            <heading class="heading">
-                <div>
-                    <p class="priv-info">პირადი ინფო</p>
-                </div>
-                <div class="page-div">
-                    <span class="page">1/3</span>
-                </div>
-            </heading>
-           <form class="form" id="form-personal-info" action="get" onkeyup="savePersonalInfo()">
-              <div class="form-name">
-                <div class="name">
-                   <label for="input-name" class="input-title">სახელი</label>
-                   <input  class="input-name" type="text"  id="input-name" pattern="/^[ა-ჰ]+$/" minlength="2" placeholder="სახელი" required/>
-                   <span class="input-span">მინიმუმ ორი ასო, ქართული ასოები</span>
-                </div>
-                <div class="name">
-                    <label for="last-name" class="input-title">გვარი</label>
-                    <input  class="input-name" type="text"  id="last-name" pattern="/^[ა-ჰ]+$/"  minlength="2" placeholder="გვარი" required/>
-                    <span class="input-span">მინიმუმ ორი ასო, ქართული ასოები</span>
-                 </div>
-              </div>
-              <div class="img-input">
-                <label  class="input-title" >პირადი ფოტოს ატვირთვა</label>
-                <label class="file-upload">ატვირთვა <input class="input-type-file" type="file" required accept="image/jpeg, image/png, image/jpg" id="upload-img"/></label>
-              </div>
-              <div class="name">
-                <label for="input-about-me" class="input-title">ჩემ შესახებ (არასავალდებულო)</label>
-                <input type="text" class="about-input" id="input-about-me" pattern="/^[ა-ჰ]+$/" placeholder="დაწერეთ თქვენ შესახებ"/>
-              </div>
-              <div class="name">
-                 <label for="input-mail" class="input-title">ელ.პოსტა</label>
-                 <input type="email" class="contact" id="input-mail" pattern="/^[a-zA-ZO-9.]+@redberry.ge$/" placeholder="ელ.პოსტა"required/>
-                 <span class="input-span">უნდა მთავრდებოდეს @redberry.ge-ით</span>
-              </div>
-              <div class="name">
-                <label for="input-number" class="input-title">მობილურის ნომერი</label>
-                <input type="number" class="contact" id="input-number" required/>
-                <span class="input-span">უნდა აკმაყოფილებდეს ქართული მობილურის ფორმატს</span>
-             </div>
-           </form>
-           <div class="footer-button">
-                <a href="./second-page.html"><button type="submit" class="next">შემდეგი</button></a>
+    <section class="background">
+        <div class="grid-page">
+            <div class="back-btn" onclick="clearStorage()">
+                <a href="./index.html"><span class="back-arrow">
+                   < </span></a>
             </div>
-        </div>
-        <div class="resume">
-            <div class="resume-info">
-                <div class="resume-info-wrapper">
-                    <div class="resume-person">
-                        <p class="resume-name" id="resume-name"></p>
-                        <p class="resume-name" id="resume-last-name"></p>
-                     </div>
-                     <div class="resume-contact">
-                         <div class="div-contact">
-                             <img src="./image/vector-1.png" alt="logo">
-                             <a class="resume-link" href="#"> <p id="resume-mail"></p> </a>
-                         </div>
-                        <div class="div-contact">
-                         <img src="./image/Vector.png" alt="logo">
-                         <a  class="resume-link" href="#"> <p id="resume-number"></p></a>
-                        </div>   
-                     </div>  
-                     <div class="resume-bio">
-                          <p class="resume-about-me">ჩემ შესახებ</p>
-                          <p class="my-bio" id="resume-my-bio"></p>  
-                          <div class="border-resume"></div>    
-                     </div>
-                </div>
-                <div class="resume-img">
-                    <img  id="resume-img-output" src="#"/>
-                    <!-- <output id="resume-img-output"></output> -->
+            <div class="form-side">
+                <heading class="heading">
+                    <div>
+                        <p class="priv-info">პირადი ინფო</p>
+                    </div>
+                    <div class="page-div">
+                        <span class="page">1/3</span>
+                    </div>
+                </heading>
+                <form class="form" id="form-personal-info" action="get" onkeyup="savePersonalInfo()" autocomplete="off">
+                    <div class="form-name">
+                        <div class="name">
+                            <label for="input-name" class="input-title">სახელი</label>
+                            <input class="input-name" type="text" id="input-name" pattern="/^[ა-ჰ]+$/" minlength="2"
+                                placeholder="სახელი" required onblur="checkNames(namePerson)"
+                                onfocus="onFocus(namePerson)" />
+                            <span class="input-span">მინიმუმ ორი ასო, ქართული ასოები</span>
+                        </div>
+                        <div class="name">
+                            <label for="last-name" class="input-title">გვარი</label>
+                            <input class="input-name" type="text" id="last-name" pattern="/^[ა-ჰ]+$/" minlength="2"
+                                placeholder="გვარი" required onblur="checkNames(surname)" onfocus="onFocus(surname)" />
+                            <span class="input-span">მინიმუმ ორი ასო, ქართული ასოები</span>
+                        </div>
+                    </div>
+                    <div class="img-input">
+                        <label class="input-title">პირადი ფოტოს ატვირთვა</label>
+                        <label class="file-upload">ატვირთვა <input class="input-type-file" type="file" required
+                                accept="image/jpeg, image/png, image/jpg" id="upload-img" /></label>
+                    </div>
+                    <div class="name">
+                        <label for="input-about-me" class="input-title">ჩემ შესახებ (არასავალდებულო)</label>
+                        <textarea type="text" class="about-input" id="input-about-me" pattern="/^[ა-ჰ]+$/"
+                            placeholder="დაწერეთ თქვენ შესახებ" onblur="checkAboutMe(aboutMe)"
+                            onfocus="onFocus(aboutMe)"></textarea>
+                    </div>
+                    <div class="name">
+                        <label for="input-mail" class="input-title">ელ.პოსტა</label>
+                        <input type="email" class="contact" id="input-mail" placeholder="ელ.პოსტა" required
+                            onblur="checkEmail(email)" onfocus="onFocus(email)" />
+                        <span class="input-span">უნდა მთავრდებოდეს @redberry.ge-ით</span>
+                    </div>
+                    <div class="name">
+                        <label for="input-number" class="input-title">მობილურის ნომერი</label>
+                        <input type="tel" class="contact" id="input-number" required onblur="checkPhone(phoneNumber)"
+                            onfocus="onFocus(phoneNumber)" />
+                        <span class="input-span">უნდა აკმაყოფილებდეს ქართული მობილურის ფორმატს</span>
+                    </div>
+                </form>
+
+                <div class="footer-button">
+                    <a href="./second-page.html"><button type="submit" class="next">შემდეგი</button></a>
                 </div>
             </div>
-            <!-- <div class="resume-logo">
+            <div class="resume">
+                <div class="resume-info">
+                    <div class="resume-info-wrapper">
+                        <div class="resume-person">
+                            <div>
+                                <p class="resume-name" id="resume-name"></p>
+                                <p class="resume-name" id="resume-last-name"></p>
+                            </div>
+                            <div>
+                                <div class="resume-img">
+                                    <img class="img" id="resume-img-output" src="#" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="resume-contact">
+                            <div class="div-contact">
+                                <img src="./image/vector-1.png" alt="logo">
+                                <a class="resume-link" href="#">
+                                    <p id="resume-mail"></p>
+                                </a>
+                            </div>
+                            <div class="div-contact">
+                                <img src="./image/Vector.png" alt="logo">
+                                <a class="resume-link" href="#">
+                                    <p id="resume-number"></p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="resume-bio">
+                            <p class="resume-about-me">ჩემ შესახებ</p>
+                            <p class="my-bio" id="resume-my-bio"></p>
+                            <div class="border-resume"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- <div class="resume-logo">
                 <img src="./image/resume-logo.svg" alt="resume=logo">
             </div> -->
+            </div>
         </div>
-     </div>
-   </section>
-   <script src="main.js"></script>
+    </section>
+    <script src="main.js"></script>
+    <script src="validate.js"></script>
 </body>
+
 </html>

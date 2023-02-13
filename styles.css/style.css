@@ -1,390 +1,388 @@
-
-*{
-    padding:0;
-    margin:0;
-    box-sizing: border-box;
-    text-decoration: none;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
-
-body{
-    width:1920px;
-    height:1080px;
-    font-family: 'Helvetica Neue';
+*:focus {
+  outline: none;
 }
- @font-face{
-    font-family: 'Helvetica Neue';
-    src: url("../fonts/HelveticaNeue.ttc");
- }
-
+textarea {
+  resize: none;
+}
+body {
+  width: 1920px;
+  height: 1080px;
+  font-family: "Helvetica Neue";
+}
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../fonts/HelveticaNeue.ttc");
+}
 
 /* home-page */
 
-
-.main-page{
-    background-color:#ffffff;
-    background-image: url(../image/background.png);
-    background-repeat: no-repeat;
-    background-size:contain;
-    width:100%;
-    height:100%;
-    position:relative;
+.main-page {
+  background-color: #ffffff;
+  background-image: url(../image/background.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
-.top-logo{
-    position:absolute;
-    top:25px;
-    left:70px;
+.top-logo {
+  position: absolute;
+  top: 25px;
+  left: 70px;
 }
 
-.center-logo{
-    position: absolute;
-   left: 1076px;
-   top: 473px;
+.center-logo {
+  position: absolute;
+  left: 1076px;
+  top: 473px;
 }
 
-.border{
-    border: 1px solid #1A1A1A;
-    position: absolute;
-    left: 70px;
-    top: 89px;
-    width:92%;
-
+.border {
+  border: 1px solid #1a1a1a;
+  position: absolute;
+  left: 70px;
+  top: 89px;
+  width: 92%;
 }
 
-.add-resume{
-    display:flex;
-    justify-content:center;
-    align-items: center;
-    height:100%;
-    
+.add-resume {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
 }
 
-.btn{
-    width:464px;
-    height:60px;
-    background-color:#1A1A1A;
-    border-radius:8px;
-    padding:18px 60px;
-    color:#ffffff;
-    font-family: 'Helvetica Neue';
-   font-style: normal;
-   font-weight: 500;
-   font-size: 20px;
-   line-height: 24px;
+.resume-img {
+  width: 200px;
+  height: 200px;
+}
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
 
+.btn {
+  width: 464px;
+  height: 60px;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  padding: 18px 60px;
+  color: #ffffff;
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  cursor: pointer;
 }
 
 /* resume first page */
 
-.background{
-    background-color:
-    rgb(223, 222, 222)
+.background {
+  background-color: rgb(223, 222, 222);
 }
-.grid-page{
-    display:grid;
-    grid-template-columns: 8% 50% 42%;
-    grid-template-areas:
-    'back-btn, form, resume';
+.grid-page {
+  display: grid;
+  grid-template-columns: 8% 50% 42%;
+  grid-template-areas: "back-btn, form, resume";
 }
 
-.form-side{
-    padding-right:149px;
+.form-side {
+  padding-right: 149px;
 }
-.heading{
-    padding-top:47px;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom:1px solid #1A1A1A;
-    margin-bottom:77px;
-   
-}
-
-
-.back-btn{
-    padding:45px 48px;
-}
-.priv-info{
-    font-family: 'Helvetica Neue';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 29px;
-    padding-bottom:12px;
-    color:#1A1A1A;
-
+.heading {
+  padding-top: 47px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #1a1a1a;
+  margin-bottom: 77px;
 }
 
-.back-arrow{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    width:40px;
-    height:40px;
-    background-color:#ffffff;
-    border-radius:50%;
-    color:#2E2E2E;
-   
+.back-btn {
+  padding: 45px 48px;
+}
+.priv-info {
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  padding-bottom: 12px;
+  color: #1a1a1a;
 }
 
-.page{
-    font-family: 'Helvetica Neue';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    color: #1A1A1A;
+.back-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  color: #2e2e2e;
 }
 
+.page {
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #1a1a1a;
+}
 
 /* form */
-.form{
-    display:flex;
-    flex-direction: column;
-   
+.form {
+  display: flex;
+  flex-direction: column;
 }
-.form-name{
-    display:flex;
-    justify-content: space-between;
-}
-
-.name{
-    display:flex;
-    flex-direction: column;
-    justify-content:center;
-   
+.form-name {
+  display: flex;
+  justify-content: space-between;
 }
 
-.input-title{
-    font-family: 'Helvetica Neue';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 21px;
-    padding-bottom:8px;
-    color:#000000;
-    padding-top:33px;
+.name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.input-name{
-
-width: 371px;
-height: 48px;
-background: #FFFFFF;
-border: 1px solid #BCBCBC;
-border-radius: 4px;
-padding: 13px 16px 14px 16px;
+.input-title {
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  padding-bottom: 8px;
+  color: #000000;
+  padding-top: 33px;
 }
 
-.input-span{
-
-font-family: 'Helvetica Neue';
-font-style: normal;
-font-weight: 300;
-font-size: 14px;
-line-height: 21px;
-color:#2E2E2E;
-padding-top:8px;
+.input-name {
+  width: 371px;
+  height: 48px;
+  background: #ffffff;
+  border: 1px solid #bcbcbc;
+  border-radius: 4px;
+  padding: 13px 16px 14px 16px;
+}
+.input-span {
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+  color: #2e2e2e;
+  padding-top: 8px;
 }
 
-.img-input{
-    padding:54px 0;
+.img-input {
+  padding: 54px 0;
 }
 
-
-
-  .input-type-file{
-    display:none;
-  }
-  .file-upload{
-    cursor: pointer;
-    background-color:rgba(14, 128, 191, 1);
-    border-radius: 4px;
-    padding:4px 19px 6px 19px;
-    font-family: 'Helvetica Neue';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    color:#FFFFFF;
-    margin-left:19px;
-    outline: none;
-  }
- 
-.about-input{  
-width: 798px;
-height: 103px;
-background: #FFFFFF;
-border: 1px solid #BCBCBC;
-border-radius: 4px;
-padding:13px 16px;
+.input-type-file {
+  display: none;
+}
+.file-upload {
+  cursor: pointer;
+  background-color: rgba(14, 128, 191, 1);
+  border-radius: 4px;
+  padding: 4px 19px 6px 19px;
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  margin-left: 19px;
+  outline: none;
 }
 
-.contact{
-width: 798px;
-height: 48px;
-background: #FFFFFF;
-border: 1px solid #BCBCBC;
-border-radius: 4px;
-padding:13px 16px;
+.about-input {
+  width: 798px;
+  height: 103px;
+  background: #ffffff;
+  border: 1px solid #bcbcbc;
+  border-radius: 4px;
+  padding: 13px 16px;
+  width: 100%;
 }
 
-
-.footer-button{
-    
-    display:flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+.contact {
+  width: 798px;
+  height: 48px;
+  background: #ffffff;
+  border: 1px solid #bcbcbc;
+  border-radius: 4px;
+  padding: 13px 16px;
+  width: 100%;
 }
 
-.footer-buttons{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.next{
-    background: #6B40E3;
-    border-radius: 4px;
-    color:#FFFFFF;
-    width:151px;
-    height:48px;
-    margin-top:95px;
-    margin-bottom:65px;
-    cursor:pointer;
-    padding: 18px 60px;
-    font-family: 'Helvetica Neue';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 0.08em;
-    display:flex;
-    justify-content: center;
-    align-items: center;
+.footer-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
-.resume{
-    background-color:#FFFFFF;
-    padding:68px 75px 44px 80px;
-   
+.footer-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.next {
+  background: #6b40e3;
+  border-radius: 4px;
+  color: #ffffff;
+  width: 151px;
+  height: 48px;
+  margin-top: 95px;
+  margin-bottom: 65px;
+  cursor: pointer;
+  padding: 18px 60px;
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.08em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.resume-logo{
-    height:1080px;
-    display:flex;
-    justify-content:flex-start;
-    align-items: flex-end;
-    padding:0 0 44px 78px;
+.resume {
+  background-color: #ffffff;
+  padding: 68px 75px 44px 80px;
 }
 
+.resume-logo {
+  height: 1080px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 0 0 44px 78px;
+}
 
 /* second page form */
 
-.description{
-    width: 798px;
-    height: 123px;
-    background: #FFFFFF;
-    border: 1px solid #BCBCBC;
-    border-radius: 4px;
+.description {
+  /* width: 798px; */
+  height: 123px;
+  background: #ffffff;
+  border: 1px solid #bcbcbc;
+  border-radius: 4px;
+  padding: 13px 16px;
+  width: 100%;
 }
-.additional-info{
-    display:none;
+.additional-info {
+  display: none;
 }
-.active{
-    display:block;
+.active {
+  display: block;
 }
-.description-input{
-    display:flex;
-    flex-direction: column;
-    justify-content:center;
-    border-bottom:1px solid #C1C1C1;
-    padding-bottom:59px;
-}
-
-.add-info{
-    margin-top:45px;
-    display:flex;
-    justify-content: flex-start;
+.description-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid #c1c1c1;
+  padding-bottom: 59px;
 }
 
-.more-info{
-    width: 289px;
-    height: 48px;
-    background-color:rgba(98, 161, 235, 1);
-    color:#FFFFFF;
-    border-radius:4px;
-    font-family: 'Helvetica Neue';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-    padding:14px 21px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
+.add-info {
+  margin-top: 45px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.more-info {
+  width: 289px;
+  height: 48px;
+  background-color: rgba(98, 161, 235, 1);
+  color: #ffffff;
+  border-radius: 4px;
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 14px 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* third page form */
 
-.select{
- width: 371px;
-height: 48px;
-background: #FFFFFF;
-border: 1px solid #BCBCBC;
-border-radius: 4px;
-font-family: 'Helvetica Neue';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 21px;
-padding:13px 16px 14px 16px; 
+.select {
+  width: 371px;
+  height: 48px;
+  background: #ffffff;
+  border: 1px solid #bcbcbc;
+  border-radius: 4px;
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  padding: 13px 16px 14px 16px;
 }
 
-.education{
- width: 798px;
-height: 179px;
-background: #FFFFFF;
-border: 1px solid #BCBCBC;
-border-radius: 4px;
+.education {
+  width: 798px;
+  height: 179px;
+  background: #ffffff;
+  border: 1px solid #bcbcbc;
+  border-radius: 4px;
+  width: 100%;
+  padding: 13px 16px;
 }
 
 /* resume side */
 
-.resume-person{
-   display:flex;
-   justify-content: flex-start;
-   align-items: center;
-
+.resume-person {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.resume-name{
-font-family: 'Helvetica Neue';
-font-style: normal;
-font-weight: 700;
-font-size: 34px;
-line-height: 42px;
-color: #F93B1D;
-padding:0 20px 17px 0;
+.resume-name {
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 42px;
+  color: #f93b1d;
+  padding: 0 20px 17px 0;
 }
 
-.resume-info{
-    display:flex;
-    flex-direction: column;
-    align-items:flex-start;
-    justify-content:flex-start;
+.resume-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
-.resume-contact{
-   display:flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items:flex-start;
+.resume-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
-.div-contact{
-    display:flex;
-    justify-content: center;
-    align-items:center;
-    padding-bottom:10px;
+.div-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
 }
 /* .date{
 font-family: 'Helvetica Neue';
@@ -395,102 +393,113 @@ line-height: 21px;
 padding:15px 0 15px 10px;
 color:rgba(144, 144, 144, 1);
 } */
-.resume-link{
-font-family: 'Helvetica Neue';
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-line-height: 21px;
-color:#1A1A1A;
-padding-left:10px;
-
+.resume-link {
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #1a1a1a;
+  padding-left: 10px;
 }
 
-.resume-bio{
-    padding-top:34px;
-   
+.resume-bio {
+  padding-top: 34px;
 }
-.border-resume{
-    width:662px;
-    margin:auto;
-    background-color:rgba(200, 200, 200, 1);
-    height:1px;
-    margin:19px 0 24px 0;
+.border-resume {
+  width: 662px;
+  margin: auto;
+  background-color: rgba(200, 200, 200, 1);
+  height: 1px;
+  margin: 19px 0 24px 0;
 }
-.resume-about-me{
-    font-family: 'Helvetica Neue';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 22px;
-    color:#F93B1D;
-    padding-bottom:15px;
-}
-
-.my-bio{
-    width:432px;
-    font-family: 'Helvetica Neue';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    color:#000000;
+.resume-about-me {
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #f93b1d;
+  padding-bottom: 15px;
 }
 
-.position{
-  font-family: 'Helvetica Neue';
+.my-bio {
+  width: 432px;
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.position {
+  font-family: "Helvetica Neue";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
-  color:#1A1A1A;
-  padding:15px 0 7px 7px;
+  color: #1a1a1a;
+  padding: 15px 0 7px 7px;
 }
 
-.work-date{
-    font-family: 'Helvetica Neue';
-    font-style: italic;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    color: #919191;
-    padding-bottom:16px;
-
+.work-date {
+  font-family: "Helvetica Neue";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #919191;
+  padding-bottom: 16px;
 }
 
-.my-exp{
-    width:662px;
-    height:66px;
-    font-family: 'Helvetica Neue';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    text-transform: capitalize;
-    color:#000000;
+.my-exp {
+  width: 662px;
+  height: 66px;
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: capitalize;
+  color: #000000;
 }
 
-.add-personal-resume{
-    display:none;
+.add-personal-resume {
+  display: none;
 }
 
-.add-active-resume{
-    display:block;
+.add-active-resume {
+  display: block;
 }
 
-.my-education{
-    width: 662px;
-    height: 88px;
-    font-family: 'Helvetica Neue';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    text-transform: lowercase;
-    color: #000000;
+.my-education {
+  width: 662px;
+  height: 88px;
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: lowercase;
+  color: #000000;
 }
 
-.add-resume-bio{
-    display:none;
-    padding-top:34px;
+.add-resume-bio {
+  display: none;
+  padding-top: 34px;
+}
+
+.input-valid {
+  background-image: url(../image/vectorpass.png);
+  background-repeat: no-repeat;
+  background-position: 98%;
+  border: 1px solid rgba(152, 227, 126, 1);
+}
+
+.input-not-valid {
+  background-image: url(../image/vectorerror.png);
+  background-repeat: no-repeat;
+  background-position: 98%;
+  border: 1px solid rgba(239, 80, 80, 1);
 }
