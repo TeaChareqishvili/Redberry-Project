@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css/style.css">
     <title>Resume</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <!--  checkAllInputs() -->
 <body onload="getPersonalInfo()">
@@ -43,7 +44,7 @@
                     </div>
                     <div class="img-input">
                         <label class="input-title">პირადი ფოტოს ატვირთვა</label>
-                        <label class="file-upload">ატვირთვა <input class="input-type-file" type="file" required
+                        <label class="file-upload">ატვირთვა <input class="input-type-file" type="file"
                                 accept="image/jpeg, image/png, image/jpg" id="upload-img" /></label>
                     </div>
                     <div class="name">
@@ -74,41 +75,41 @@
                 <div class="resume-info">
                     <div class="resume-info-wrapper">
                         <div class="resume-person">
-                            <div>
+                            <div class="resume-names">
                                 <p class="resume-name" id="resume-name"></p>
                                 <p class="resume-name" id="resume-last-name"></p>
                             </div>
                             <div>
                                 <div class="resume-img">
-                                    <img class="img" id="resume-img-output" src="#" />
+                                    <img class="img" id="resume-img-output" src="" />
                                 </div>
                             </div>
                         </div>
                         <div class="resume-contact">
                             <div class="div-contact">
-                                <img src="./image/vector-1.png" alt="logo">
+                                <img src="./image/vector-1.png" alt="logo" id="icon-mail" class="hide">
                                 <a class="resume-link" href="#">
                                     <p id="resume-mail"></p>
                                 </a>
                             </div>
                             <div class="div-contact">
-                                <img src="./image/Vector.png" alt="logo">
+                                <img src="./image/Vector.png" alt="logo" id="icon-phone" class="hide">
                                 <a class="resume-link" href="#">
                                     <p id="resume-number"></p>
                                 </a>
                             </div>
                         </div>
                         <div class="resume-bio">
-                            <p class="resume-about-me">ჩემ შესახებ</p>
+                            <p class="hide resume-about-me" id="resume-about-me">ჩემ შესახებ</p>
                             <p class="my-bio" id="resume-my-bio"></p>
-                            <div class="border-resume"></div>
+                            <div class="hide border-resume" id="border-resume"></div>
                         </div>
                     </div>
-
+                    <div class="resume-logo">
+                        <img src="./image/resume-logo.svg" alt="resume=logo">
+                    </div>
                 </div>
-                <!-- <div class="resume-logo">
-                <img src="./image/resume-logo.svg" alt="resume=logo">
-            </div> -->
+               
             </div>
         </div>
     </section>

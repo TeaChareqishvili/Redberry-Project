@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css/style.css">
     <title>Resume</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 <body onload="getEducation()">
@@ -94,112 +95,127 @@
                         </div>
                     </div>
                     <div class="add-info">
-                        <button type="button" class="more-info">სხვა სასწავლებლის დამატება</button>
+                        <button type="button" class="disabled more-info">სხვა სასწავლებლის დამატება</button>
                     </div>
                 </form>
                 <footer>
                     <div class="footer-buttons">
-                        <a href="./second-page.html"><button type="button" class="next">უკან</button></a>
-                        <a href="#"><button type="submit" class="next">დასრულება</button></a>
+                        <a href="./second-page.html"><button type="button" class="next"
+                                onclick="submitForm()">უკან</button></a>
+                        <a href="./resumee.html"><button class="next">დასრულება</button></a>
                     </div>
                 </footer>
             </div>
             <div class="resume">
                 <div class="resume-info">
-                    <div class="resume-person">
-                        <p class="resume-name" id="resume-name"></p>
-                        <p class="resume-name" id="resume-last-name"></p>
-                    </div>
-                    <div class="resume-contact">
-                        <div class="div-contact">
-                            <img src="./image/vector-1.png" alt="logo">
-                            <a class="resume-link" href="#">
-                                <p id="resume-mail"></p>
-                            </a>
+                    <div class="resume-info-wrapper">
+                        <div class="resume-person">
+                            <div class="resume-names">
+                                <p class="resume-name" id="resume-name"></p>
+                                <p class="resume-name" id="resume-last-name"></p>
+                            </div>
+                            <div>
+                                <div class="resume-img">
+                                    <img class="img" id="resume-img-output" src="#" />
+                                </div>
+                            </div>
                         </div>
-                        <div class="div-contact">
-                            <img src="./image/Vector.png" alt="logo">
-                            <a class="resume-link" href="#">
-                                <p id="resume-number"></p>
-                            </a>
+                        <div class="resume-contact">
+                            <div class="div-contact">
+                                <img src="./image/vector-1.png" alt="logo" id="icon-mail" class="hide">
+                                <a class="resume-link" href="#">
+                                    <p id="resume-mail"></p>
+                                </a>
+                            </div>
+                            <div class="div-contact">
+                                <img src="./image/Vector.png" alt="logo" id="icon-phone" class="hide">
+                                <a class="resume-link" href="#">
+                                    <p id="resume-number"></p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="resume-bio">
+                            <p class="hide resume-about-me" id="resume-about-me">ჩემ შესახებ</p>
+                            <p class="my-bio" id="resume-my-bio"></p>
+                            <div class="hide border-resume" id="border-resume"></div>
                         </div>
                     </div>
-                    <div class="resume-bio">
-                        <p class="resume-about-me">ჩემ შესახებ</p>
-                        <p class="my-bio" id="resume-my-bio"></p>
-                        <div class="border-resume"></div>
-                    </div>
-                    <!--  -->
+                </div>
+                <!--  -->
+                <div class="resume-bio">
+                    <p class="hide resume-about-me" id="resume-experience">გამოცდილება</p>
+                </div>
+                <div class="resume-person-education">
+                    <p class="position" id="resume-position"></p>
+                    <p class="position" id="resume-work"></p>
+                </div>
+                <div class="resume-person-education">
+                    <p class="work-date" id="resume-start-date"> </p>
+                    <p class="work-date" id="resume-end-date"> </p>
+                </div>
+                <div class="resume-bio">
+                    <p class="my-exp" id="resume-my-exp"></p>
+                    <div class="hide border-resume" id="resume-experience-border"></div>
+                </div>
+
+                <div class="add-personal-resume">
                     <div class="resume-bio">
                         <p class="resume-about-me">გამოცდილება</p>
                     </div>
                     <div class="resume-person">
-                        <p class="position" id="resume-position"></p>
-                        <p class="position" id="resume-work"></p>
+                        <p class="position" id="add-resume-position"></p>
+                        <p class="position" id="add-resume-work"></p>
                     </div>
                     <div class="resume-person">
-                        <p class="work-date" id="resume-start-date"> - </p>
-                        <p class="work-date" id="resume-end-date">- </p>
+                        <p class="work-date" id="add-resume-start-date"> - </p>
+                        <p class="work-date" id="add-resume-end-date">- </p>
                     </div>
                     <div class="resume-bio">
-                        <p class="my-exp" id="resume-my-exp"></p>
+                        <p class="my-exp" id="add-resume-my-exp"></p>
                         <div class="border-resume"></div>
                     </div>
-
-                    <div class="add-personal-resume">
-                        <div class="resume-bio">
-                            <p class="resume-about-me">გამოცდილება</p>
-                        </div>
-                        <div class="resume-person">
-                            <p class="position" id="add-resume-position"></p>
-                            <p class="position" id="add-resume-work"></p>
-                        </div>
-                        <div class="resume-person">
-                            <p class="work-date" id="add-resume-start-date"> - </p>
-                            <p class="work-date" id="add-resume-end-date">- </p>
-                        </div>
-                        <div class="resume-bio">
-                            <p class="my-exp" id="add-resume-my-exp"></p>
-                            <div class="border-resume"></div>
-                        </div>
-                    </div>
-
-
-                    <div class="resume-bio">
-                        <p class="resume-about-me">განათლება</p>
-                    </div>
-
-                    <div class="resume-person">
-                        <p class="position" id="resume-univercity"></p>
-                        <p class="position" id="resume-degree"></p>
-                    </div>
-                    <div class="resume-person">
-                        <!-- <p class="position" id="resume-degree"></p> -->
-                        <p class="position" id="resume-degree-date"></p>
-                    </div>
-                    <div class="resume-bio">
-                        <p class="my-education" id="resume-education-desc"></p>
-                    </div>
                 </div>
 
+                <div class="resume-bio">
+                    <p class="hide resume-about-me" id="resume-education">განათლება</p>
+                </div>
 
-                <div class="add-resume-bio">
-                    <p class="resume-about-me">განათლება</p>
+                <div class="resume-person-education">
+                    <p class="position" id="resume-univercity"></p>
+                    <p class="position" id="resume-degree"></p>
                 </div>
                 <div class="resume-person">
-                    <p class="position" id="resume-degree"></p>
-                    <p class="position" id="resume-degree-date"></p>
+                    <!-- <p class="position" id="resume-degree"></p> -->
+                    <p class="position work-date" id="resume-degree-date"></p>
                 </div>
                 <div class="resume-bio">
                     <p class="my-education" id="resume-education-desc"></p>
                 </div>
+
+                <div class="resume-logo">
+                    <img src="./image/resume-logo.svg" alt="resume=logo">
+                </div>
             </div>
 
 
-            <!-- <div class="resume-logo">
-                     <img src="./image/resume-logo.svg" alt="resume=logo">
-                 </div> -->
+
+
+
+            <div class="add-resume-bio">
+                <p class="resume-about-me">განათლება</p>
+            </div>
+            <div class="resume-person">
+                <p class="position" id="resume-degree"></p>
+                <p class="position" id="resume-degree-date"></p>
+            </div>
+            <div class="resume-bio">
+                <p class="my-education" id="resume-education-desc"></p>
+            </div>
         </div>
+
+
+        </div>
+
         </div>
     </section>
 
