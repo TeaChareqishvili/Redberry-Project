@@ -9,8 +9,12 @@
 body{
     width:1920px;
     height:1080px;
+    font-family: 'Helvetica Neue';
 }
-
+ @font-face{
+    font-family: 'Helvetica Neue';
+    src: url("../fonts/HelveticaNeue.ttc");
+ }
 
 
 /* home-page */
@@ -187,28 +191,7 @@ padding-top:8px;
     padding:54px 0;
 }
 
-/* 
-  .input-type-file::-webkit-file-upload-button{
-      visibility:hidden;    
-}   */
-  /* .input-type-file::before {
-    content: 'ატვირთვა';
-    display: inline-block;
-    background:rgba(14, 128, 191, 1);
-    border-radius: 4px;
-    padding:4px 19px 6px 19px;
-    outline: none;
-    white-space: nowrap;
-  -webkit-user-select: none;
-    cursor: pointer;
-    font-family: 'Helvetica Neue';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    color:#FFFFFF;
-    margin-left:19px;
-  }   */
+
 
   .input-type-file{
     display:none;
@@ -234,6 +217,7 @@ height: 103px;
 background: #FFFFFF;
 border: 1px solid #BCBCBC;
 border-radius: 4px;
+padding:13px 16px;
 }
 
 .contact{
@@ -242,6 +226,7 @@ height: 48px;
 background: #FFFFFF;
 border: 1px solid #BCBCBC;
 border-radius: 4px;
+padding:13px 16px;
 }
 
 
@@ -491,4 +476,21 @@ padding-left:10px;
 
 .add-active-resume{
     display:block;
+}
+
+.my-education{
+    width: 662px;
+    height: 88px;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: lowercase;
+    color: #000000;
+}
+
+.add-resume-bio{
+    display:none;
+    padding-top:34px;
 }

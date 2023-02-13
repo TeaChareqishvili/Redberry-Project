@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="./styles.css/style.css">
     <title>Resume</title>
 </head>
-<body>
+<body onload="getExperience()">
     <section class="background">
         <div class="grid-page">
-            <div class="back-btn">
+            <div class="back-btn"  onclick="clearStorage()">
                 <a href="./index.html" ><span class="back-arrow"> < </span></a>
             </div>
             <div class="form-side">
@@ -22,15 +22,15 @@
                         <span class="page">2/3</span>
                     </div>
                 </heading>
-                <form class="form" id="form" action="get" onkeyup="secondPage()">
+                <form class="form" id="form-experience" action="get" onkeyup="saveExperience()">
                     <div class="name">
                         <label class="input-title">თანამდებობა</label>
-                        <input type="text" class="contact" id="input-position" required/>
+                        <input type="text" class="contact" id="input-position" pattern="/^[ა-ჰ]+$/"  minlength="2"required/>
                         <span class="input-span">მინიმუმ ორი სიმბოლო</span>
                      </div>
                      <div class="name">
                        <label class="input-title">დამსაქმებელი</label>
-                       <input type="text" class="contact" id="input-work" required/>
+                       <input type="text" class="contact" id="input-work" pattern="/^[ა-ჰ]+$/"  minlength="2" required/>
                        <span class="input-span">მინიმუმ ორი სიმბოლო</span>
                     </div>
                     <div class="form-name">
@@ -45,13 +45,13 @@
                       </div>
                       <div class="description-input">
                         <label class="input-title">აღწერა</label>
-                        <input type="text" class="description" id="description-input"/>
+                        <input type="text" class="description" id="description-input" pattern="/^[ა-ჰ]+$/" required/>
                       </div>
 
                      <div class="additional-info">
                         <div class="name">
                             <label class="input-title">თანამდებობა</label>
-                            <input type="text" class="contact" id="add-input-position" required/>
+                            <input type="text" class="contact" id="add-input-position"  required/>
                             <span class="input-span">მინიმუმ ორი სიმბოლო</span>
                          </div>
                          <div class="name">
@@ -71,7 +71,7 @@
                           </div>
                           <div class="description-input">
                             <label class="input-title">აღწერა</label>
-                            <input type="text" class="description" id="add-description-input"/>
+                            <input type="text" class="description" id="add-description-input" pattern="/^[ა-ჰ]+$/"/>
                           </div>
                      </div>
                      <div class="add-info">
@@ -87,7 +87,7 @@
             </div>
               <div class="resume">
                 <div class="resume-info">
-                    <!-- <div class="resume-person">
+                    <div class="resume-person">
                        <p class="resume-name" id="resume-name"></p>
                        <p class="resume-name" id="resume-last-name"></p>
                     </div>
@@ -105,8 +105,9 @@
                          <p class="resume-about-me">ჩემ შესახებ</p>
                          <p class="my-bio" id="resume-my-bio"></p>  
                          <div class="border-resume"></div>    
-                    </div>   -->
-
+                    </div> 
+                    </div> 
+                    <!--  -->
                     <div class="resume-bio">
                         <p class="resume-about-me" >გამოცდილება</p>      
                    </div> 
@@ -140,7 +141,6 @@
                 <div class="border-resume"></div>  
            </div>
                </div>
-                </div>
                
                  <!-- <div class="resume-logo">
                      <img src="./image/resume-logo.svg" alt="resume=logo">

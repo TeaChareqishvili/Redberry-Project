@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./styles.css/style.css">
     <title>Resume</title>
 </head>
-<body>
+<body onload="getEducation()">
     <section class="background">
         <div class="grid-page">
             <div class="back-btn">
@@ -22,16 +22,16 @@
                         <span class="page">3/3</span>
                     </div>
                 </heading>
-                <form class="form" id="form" action="get">
+                <form class="form" id="form-education" action="get" onkeyup="saveEducationInfo()">
                     <div class="name">
                         <label class="input-title">სასწავლებელი</label>
-                        <input type="email" class="contact" required/>
+                        <input type="email" class="contact" pattern="/^[ა-ჰ]+$/" id="input-education" required/>
                         <span class="input-span">მინიმუმ ორი სიმბოლო</span>
                      </div>
                      <div class="form-name">
                         <div class="name">
                            <label class="input-title">ხარისხი</label>
-                           <select class="select">
+                           <select class="select" id="select-education">
                             <option value="" disabled selected hidden>აირჩიეთ ხარისხი</option>
                             <option value="სასუალო სკოლის დიპლომი">საშუალო სკოლის დიპლომი</option>
                             <option value="ზოგადსაგანმანათებლო დიპლომი">ზოგადსაგანმანათებლო დიპლომი</option>
@@ -46,17 +46,17 @@
                         </div>
                         <div class="name">
                             <label class="input-title">დამთავრების რიცხვი</label>
-                            <input  class="input-name" type="date"  required/>
+                            <input  class="input-name" type="date" id="input-education-graduate-date" required/>
                          </div> 
                       </div>
                       <div class="description-input">
                         <label class="input-title">აღწერა</label>
-                        <input type="text" class="education"/>
+                        <input type="text" class="education" pattern="/^[ა-ჰ]+$/" id="input-education-description" />
                       </div>
                       <div class="additional-info">
                         <div class="name">
                             <label class="input-title">სასწავლებელი</label>
-                            <input type="email" class="contact" required/>
+                            <input type="email" class="contact" pattern="/^[ა-ჰ]+$/" required/>
                             <span class="input-span">მინიმუმ ორი სიმბოლო</span>
                          </div>
                          <div class="form-name">
@@ -82,7 +82,7 @@
                           </div>
                           <div class="description-input">
                             <label class="input-title">აღწერა</label>
-                            <input type="text" class="education"/>
+                            <input type="text" class="education" pattern="/^[ა-ჰ]+$/"/>
                           </div>
                       </div>  
                       <div class="add-info">
@@ -97,10 +97,97 @@
                    </footer>  
             </div>
             <div class="resume">
-                <div class="resume-logo">
-                    <img src="./image/resume-logo.svg" alt="resume=logo">
+                <div class="resume-info">
+                    <div class="resume-person">
+                       <p class="resume-name" id="resume-name"></p>
+                       <p class="resume-name" id="resume-last-name"></p>
+                    </div>
+                    <div class="resume-contact">
+                        <div class="div-contact">
+                            <img src="./image/vector-1.png" alt="logo">
+                            <a class="resume-link" href="#"> <p id="resume-mail"></p> </a>
+                        </div>
+                       <div class="div-contact">
+                        <img src="./image/Vector.png" alt="logo">
+                        <a  class="resume-link" href="#"> <p id="resume-number"></p></a>
+                       </div>   
+                    </div>  
+                    <div class="resume-bio">
+                         <p class="resume-about-me">ჩემ შესახებ</p>
+                         <p class="my-bio" id="resume-my-bio"></p>  
+                         <div class="border-resume"></div>    
+                    </div>  
+                    <!--  -->
+                    <div class="resume-bio">
+                        <p class="resume-about-me" >გამოცდილება</p>      
+                   </div> 
+                   <div class="resume-person">
+                        <p class="position" id="resume-position"></p>
+                        <p class="position" id="resume-work"></p>
+                   </div>
+                <div class="resume-person">
+                      <p class="work-date" id="resume-start-date"> - </p>
+                     <p class="work-date" id="resume-end-date">- </p>
+               </div>
+               <div class="resume-bio">
+                    <p class="my-exp" id="resume-my-exp"></p>
+                    <div class="border-resume"></div>  
+               </div>
+
+               <div class="add-personal-resume">
+                <div class="resume-bio">
+                    <p class="resume-about-me" >გამოცდილება</p>      
+               </div> 
+               <div class="resume-person">
+                    <p class="position" id="add-resume-position"></p>
+                    <p class="position" id="add-resume-work"></p>
+               </div>
+            <div class="resume-person">
+                  <p class="work-date" id="add-resume-start-date"> - </p>
+                 <p class="work-date" id="add-resume-end-date">- </p>
+           </div>
+           <div class="resume-bio">
+                <p class="my-exp" id="add-resume-my-exp"></p>
+                <div class="border-resume"></div>  
+           </div>
+               </div>
+
+
+               <div class="resume-bio">
+                <p class="resume-about-me" >განათლება</p>      
+           </div> 
+
+           <div class="resume-person">
+               <p class="position" id="resume-univercity"></p>
+            <p class="position" id="resume-degree"></p>
+       </div>
+           <div class="resume-person">
+                <!-- <p class="position" id="resume-degree"></p> -->
+                <p class="position" id="resume-degree-date"></p>
+           </div>
+              <div class="resume-bio">
+                 <p class="my-education" id="resume-education-desc"></p>
+              </div>
                 </div>
-            </div>
+
+               
+                <div class="add-resume-bio">
+                    <p class="resume-about-me" >განათლება</p>      
+               </div> 
+               <div class="resume-person">
+                    <p class="position" id="resume-degree"></p>
+                    <p class="position" id="resume-degree-date"></p>
+               </div>
+                  <div class="resume-bio">
+                     <p class="my-education" id="resume-education-desc"></p>
+                  </div>
+                    </div>
+
+               
+                 <!-- <div class="resume-logo">
+                     <img src="./image/resume-logo.svg" alt="resume=logo">
+                 </div> -->
+             </div>
         </div>
     </section>
 
